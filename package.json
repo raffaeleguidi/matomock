@@ -1,0 +1,10 @@
+{
+  "name": "matomock",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node matomock.js"
+  },
+  "dependencies": {
+  }
+}

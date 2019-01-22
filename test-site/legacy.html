@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Test site / legacy script page</title>
+        
+        <!-- legacy piwik code -->
+        <script type="text/javascript" id="" src="//localhost:8080/piwik.js"></script>
+        <script type="text/javascript" id="">_sp_piwikTracker=Piwik.getTracker("//localhost:8080/piwik.php",4);_sp_piwikTracker.trackPageView();_sp_piwikTracker.enableJSErrorTracking();_sp_piwikTracker.trackAllContentImpressions();</script>
+        <noscript><p><img src="//localhost:8080/piwik.php?idsite=4" style="border:0;" alt=""></p></noscript>
+        <!-- end legacy piwik code -->
+
+        <script>
+            function raiseAnError(){
+                throw "this is a deliberately thrown error in the other page"
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Other page</h1>
+        <p>this is a test site. This is a link <a href="index.html">back to the home page</a></p>
+        <p><a href="#" onclick="raiseAnError(); return false;">throw an error</a></p>
+    </body>
+</html>
+  
