@@ -8,12 +8,16 @@ const mockPiwikJs = `Piwik = {
       trackPageView: function(){},
       enableJSErrorTracking: function(){},
       trackAllContentImpressions: function(){},
-      enableJSErrorTracking: function(){}
+      enableJSErrorTracking: function(){},
+      setCustomVariable: function(){},
+      getVisitorId: function(){},
+      trackEvent: function(){},
+      getSiteId: function(){}
     }
   }
 }
 `
-/* above mockPiwikJs is especially designed to work with this script:
+/* above mockPiwikJs is a compatibility layer designed to work with scripts like this:
 <!-- booklyng piwik code -->
 <script type="text/javascript" id="" src="//localhost:8080/piwik.js"></script>
 <script type="text/javascript" id="">_sp_piwikTracker=Piwik.getTracker("//localhost:8080/piwik.php",4);_sp_piwikTracker.trackPageView();_sp_piwikTracker.enableJSErrorTracking();_sp_piwikTracker.trackAllContentImpressions();</script>
